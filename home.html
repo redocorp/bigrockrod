@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="css/normalize.min.css" type="text/css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" type="text/css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">	
+	<link href="css/style.css" type="text/css" rel="stylesheet">
+	<link href="css/special.css" type="text/css" rel="stylesheet">
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+ 	<title>Big Rock Beta</title>
+ 	<script src="scripts/jquery.js"></script>
+	<script src="scripts/modernizr.custom.js"></script>
+		<script>
+$(document).ready(function(){
+
+if(!Modernizr.input.placeholder){
+
+	$('[placeholder]').focus(function() {
+	  var input = $(this);
+	  if (input.val() == input.attr('placeholder')) {
+		input.val('');
+		input.removeClass('placeholder');
+	  }
+	}).blur(function() {
+	  var input = $(this);
+	  if (input.val() == '' || input.val() == input.attr('placeholder')) {
+		input.addClass('placeholder');
+		input.val(input.attr('placeholder'));
+	  }
+	}).blur();
+	$('[placeholder]').parents('form').submit(function() {
+	  $(this).find('[placeholder]').each(function() {
+		var input = $(this);
+		if (input.val() == input.attr('placeholder')) {
+		  input.val('');
+		}
+	  })
+	});
+
+}
+
+});
+</script>
+	 	
+
+</head>
+<body>
+<div class="body-wrapper">
+<div class="header">
+	<div class="header-wrapper">
+		<div class="header-livechat-btn">Live Chat</div>
+		<div class="header-support-btn">Support</div>
+		<div class="header-contactus-btn"><i class="fa fa-phone"></i> Contact Us</div>
+		<div class="header-account-area">
+			<div class="signup-btn" data-toggle="modal" data-target="#signupModal">Sign Up</div><p >|</p><div data-toggle="modal" data-target="#loginModal" class="login-btn btn ">Login</div> 
+			<br><br>
+			<div class="header-cart btn btn-xs" data-toggle="modal" data-target="#cartModal" style="margin-left:25%; border-radius:2px; border:#ccc solid 2px; position:relative; margin-top:2px; font-family:arial; color:#fff;"><span class="fa fa-shopping-cart fa-lg pull-left"></span><span class="badge " style="color:orange; background-color:#000; font-size:14px; font-weight:bold; margin-top:6px;"> 0</span> <span style="margin:0; padding:0; margin-top:6px; font-weight:bold">Items &nbsp;&nbsp;&nbsp;</span></div>&nbsp;
+		</div>
+
+		<div class="logo"></div>
+
+		
+		<div class="about-message" style="margin:0 auto; text-align:center"><h3>India's Most Reliable Web Service Provider</h3></div>
+		<div style="height:50px;"></div> <!-- space -->
+
+		<!--Domain Search -->
+		<div class="header-domain-search" >
+			<h1 >QUICK SEARCH AND REGISTER WITH US</h1>
+			<form role="form" action="domainsearch.html">
+				<button class="btn btn-warning" style="width:80px; height:50px; float:right; margin-right:40px;" ><i class="fa fa-search fa-2x"></i></button>
+				<input type="text" placeholder="Search your domain name here" class="form-control" style="width:450px; margin:0 auto; margin-left:50px; height:50px;  ">
+
+			</form>
+			
+			<h5 > Starts at Just ₹ 199 Only.<div class="domain-search-view-plans-btn">View Plans</div></h5>
+			
+			
+		</div> <!-- domain -search close -->
+
+		<div class="Domain-pricing-overview" style="margin:0 auto; width:auto;">
+			<div class="domain-pricing-circle1">.Net
+			<p style="text-decoration:line-through; font-size:12px;">Rs. 700</p>
+			<p style="font-size:18px; font-weight:bold; color:#f58220; line-height:5px;">Rs. 299</p>
+			</div>
+
+			<div class="domain-pricing-circle">.Com
+			<p style="text-decoration:line-through; font-size:12px;">Rs. 800</p>
+			<p style="font-size:18px; font-weight:bold; color:#f58220; line-height:5px;">Rs. 639</p>
+			</div>
+
+			<div class="domain-pricing-circle">.Org
+			<p style="text-decoration:line-through; font-size:12px;">Rs. 800</p>
+			<p style="font-size:18px; font-weight:bold; color:#f58220; line-height:5px;">Rs. 339</p>
+			</div>
+
+			<div class="domain-pricing-circle">.Biz
+			<p style="text-decoration:line-through; font-size:12px;">Rs. 800</p>
+			<p style="font-size:18px; font-weight:bold; color:#f58220; line-height:5px;">Rs. 199</p>
+			</div>
+		</div>
+	
+	</div><!-- Header Wrapper Close -->
+
+</div> <!-- Header Close -->
+</div><!-- Body wrapper close -->
+<div class="container" >
+	<div class="nav-top-bar" style="background:#5e6565; height:50px; border-bottom:5px #ccc solid; min-width:1349px;"> 
+		<div class="menu-wrapper">
+			<div class="main-menu clearfix" style=""><!-- primary navigation -->	
+	    			<ul>
+	    				<li class="aboutme-nav"><a href="#"><i class="fa fa-home fa-lg "></i> Home</a></li>
+	                    <li class="mywork-nav" ><a href="domainsearch.html" id="domain-nav-hover">Domains </i></a></li>
+	            		<li class="myprojects-nav"><a href="#myprojects-space">Get Hosting</a></li>
+	            		<li><a href="">Get VPS</a></li>
+	            		<li><a href="">Build a Website</a></li>
+	            		<li><a href="">Get Email</a></li>
+	            		<li><a href="">Partner With Us</a></li>
+	            		<li class="cart-menu btn" data-toggle="modal" data-target="#cartModal" style="float:right; font-size:12px; "><a href=""><span style=" margin-top:4px;" class="fa fa-shopping-cart fa-lg pull-left"></span><span class="badge" style="position:relative; top:-1px;font-size:14px; color:orange; background-color:#000; font-weight:bold; "> 0</span> Items</a></li>
+	         		</ul>
+	    	</div>
+	
+		    <div class="show-drop-down">  
+				<div id="show-my-div" class="display-none"> 
+					<div class="nav-grid"><h4><i class="fa fa-globe pull-left"></i>Registration</h4>
+						<ul>
+							<li><i class="fa fa-chevron-right pull-left"></i>Domain Name Registration</li>
+							<li><i class="fa fa-chevron-right pull-left"></i>Bulk Domain Registration</li>
+							<li><i class="fa fa-chevron-right pull-left"></i>Premium Domains</li>
+							<li><i class="fa fa-chevron-right pull-left"></i>Domain Name Prices</li>
+						</ul>
+					</div>
+					<div class="nav-grid"><h4><i class="fa fa-share pull-left"></i>Transfer</h4>
+					<ul>
+							<li><i class="fa fa-chevron-right pull-left"></i>Domain Transfer</li>
+							<li><i class="fa fa-chevron-right pull-left"></i>Bulk Domain Transfer</li>
+						</ul>
+					</div>
+					<div class="nav-grid" style="border-right:none;"><h4><i class="fa fa-plus-circle pull-left"></i>Addons</h4>
+					<ul>
+							<li><i class="fa fa-chevron-right pull-left"></i>Domain Whois Lookup</li>
+							<li><i class="fa fa-chevron-right pull-left"></i>Name Suggestion Tool</li>
+							<li><i class="fa fa-chevron-right pull-left"></i>Free Services</li>
+						</ul>
+					</div>
+				</div>
+			</div> <!-- CLOSE SHOW DROP DOWN -->
+		</div> <!--menu wrapper -->
+	</div> <!--nav-top-bar close -->
+
+		<div class="container-wrapper">
+			<div class="content-area-first">
+				<div class="content-area-right-box">
+					<div class="content-area-right-box-inside"> 
+						<p>Build a Web Site</p>
+						<div style="position:relative; width:200px; left:200px; font-size:12px; height:110px; overflow:hidden;"> &nbsp; &nbsp; &nbsp; All it takes is 3 Easy Steps
+							<ul style="list-style:none;">
+								<li>Select a Design</li>
+								<li>Customize your Website</li>
+								<li>Publish online in minutes</li>
+							</ul>
+							<div class="hosting-screen-view-plans-btn" style="height:40px; width:120px; color:orange; background:#f1f1f1; font-weight:bold; margin-left:50px;">See more featured themes</div>
+						</div>
+					</div>
+					<div class="content-area-right-box-bottom " style="margin:0 auto; display:table; line-height:55px;">DYWB | Find a professional | Customize</div>
+				</div>
+				
+				<div class="content-area-left-box">
+					<div class="content-area-left-box-inside">
+					<div style="position:relative; left:220px; top:-30px; width:150px; height:180px; font-size:14px; overflow:hidden;">Hostings Offers : 
+						<ul style="list-style:none; font-size:12px; padding:0; margin-top:15px;">
+							<li >Unlimited Space</li>
+							<li>99.9% Uptime </li>
+							<li>30 Day Moneyback Guarantee</li>
+							<li>Easy to use Control Panels</li>
+						</ul>
+						Starts @ Rs 59/month
+						<div class="hosting-screen-view-plans-btn" style="color:orange; background:#f1f1f1; font-weight:bold;">View plans</div>
+					</div>
+
+					</div>
+					<div class="content-area-left-box-bottom" style="margin:0 auto; display:table; line-height:55px;">LINUX | WINDOWS | WORDPRESS | CMS | OTHER</div>
+				</div>
+				
+				<div class="content-area-partition"></div>
+			</div>
+			
+				<div class="content-first-box"><h4> Get <b class="btn btn-warning">started</b> with our supercharged lightning fast servers</h4></div>
+				<div class="content-second" >
+					<div class="content-second-box-first">
+						<div class="content-second-box-circle"><i class="fa fa-globe fa-5x" style="margin-top:25%; color:#fff;"></i></div>
+						<div class="">Register Your <b>Domain</b> Name</div>
+					</div>
+
+					<div class="content-second-box-first">
+						<div class="content-second-box-circle"><i class="fa fa-flash fa-5x" style="margin-top:25%; color:#fff;"></i></div>
+						<div class="">Boost up your website with our Cutting-edge <b>VPS hosting</b></div>
+					</div>
+					<div class="content-second-box-first">
+						<div class="content-second-box-circle"><i class="fa fa-laptop fa-5x" style="margin-top:25%; color:#fff;"></i></div>
+						<div class="">Build websites on your own with our easy to use <b>DIY tools</b></div>
+					</div>
+					<div class="content-second-box-first">
+						<div class="content-second-box-circle"><i class="fa fa-inbox fa-5x" style="margin-top:25%; color:#fff;"></i></div>
+						<div class=""> Buy a personalised <b>email</b></div>
+					</div>
+				
+				</div>
+				<hr>
+		</div><!-- container-wrapper close -->
+
+<div class="content-area-third" style="height:225px; width:80%; margin:0 auto; max-width:1349px; ">
+	<div class="content-third-left-box" style="">
+		<div style="height:42px; color:#000; font-weight:bold; width:100%; border-bottom:#ccc solid thin; margin:0; padding:2px 5px;">Some popular brands who rely on our platform</div> 
+		<div class="content-third-left-clients" >
+			<ul><li>Fiat</li> <li>adidas</li> <li>zee network</li> <li>wb</li> <li>ing vysya</li> 
+			<li>kotak services</li> <li>star</li> <li>yatra.com</li> <li>Hp</li> <li>star</li> <li>yatra.com</li> <li>Hp</li>
+
+		</div>
+	</div>
+
+	
+	<div class="content-third-middle-box">
+		<!-- Nav tabs -->
+		<ul class="nav nav-tabs">
+		  
+		  <li><a href="#settings" data-toggle="tab">Earn Money</a></li>
+		  <li><a href="#home" data-toggle="tab">Free Try</a></li>
+		  <li><a href="#profile" data-toggle="tab">New Deals</a></li>
+		  <li><a href="#messages" data-toggle="tab">Transfers</a></li>
+		</ul>
+
+		<!-- Tab panes -->
+		<div class="tab-content">
+		  <div class="tab-pane active" id="settings">
+		  		<div class="home-affiliates-box">
+		  			<button class="btn btn-danger" data-toggle="modal" data-target="#videoModal" style="margin-top:135px; border-radius:50%;"><i class="fa fa-play-circle fa-lg"></i> Play Video</button>
+		  		</div>
+		  </div>
+		  <div class="tab-pane " id="home">Free try our build your website on your own</div>
+		  <div class="tab-pane" id="profile">New deals for you</div>
+		  <div class="tab-pane" id="messages">Transfer your domain</div>
+		  
+		</div>
+	</div>
+
+	<div class="content-third-right-box">  
+		<div style="height:42px; color:#C11B17; font-weight:bold; width:100%; border-bottom:#ccc solid thin; margin:0; padding:10px;">WHATS HOT</div>
+		<div class="carousel-box" style=" padding:5px;">
+		    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" >
+		        <ol class="carousel-indicators" >
+		          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+		          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+		          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+		        </ol>
+		        <div class="carousel-inner">
+		            <div class="item active">
+		           		<img src="images/firstslide.jpg" alt="First slide" style="height:175px;">
+		        	</div>
+			        <div class="item">
+			            <img src="images/secondslide.jpg" alt="Second slide" style="height:175px;">
+			        </div>
+			        <div class="item">
+			           <img src="images/slidethird.jpg" alt="Third slide" style="height:175px;">
+			        </div>
+		        </div>
+		        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+		          <span class="fa fa-chevron-left"></span>
+		        </a>
+		        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+		          <span class="fa fa-chevron-right"></span>
+		        </a>
+      	    </div>
+	    	  
+		</div>
+    </div>
+
+
+
+</div> <!-- container close -->	
+
+	
+
+<div class="footer" style="" >
+	<div class="footer-wrapper" >
+		<div class="footer-top" style="height:200px;">
+			<div class="footer-grid"><h5><b>Our Products</b></h5>
+				<ul><li> Register Domain</li><li>Transfer Domain</li><li>Digital Certificates</li><li>Web Hosting</li><li>Email Hosting</li></ul>
+			</div>
+			<div class="footer-grid"><h5><b>Big Rock &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></h5>
+			<ul><li>About Us</li><li>Support</li><li>Privacy Policies</li><li>Live Chat</li><li>Contact Us</li></ul>
+			</div>
+			<div class="footer-grid"><h5><b>Account&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></h5>
+			<ul><li>My Account</li><li>Renewals</li><li>Create Account</li></ul>
+			</div>
+			<div class="footer-right" style="">
+				<center><h5><b>Payment Methods</b></h5></center>
+				<div style="border-bottom:#ccc solid 1px; "></div>
+				<div class="payment-images" style="margin:0 auto; display:table; margin-top:10px;"><img src="images/visa.png"> &nbsp; &nbsp; <img src="images/mastercard.png">&nbsp; &nbsp; <img src="images/amex.png">&nbsp; &nbsp; <img src="images/paypal.png">
+				<h6>We also accept Indian Debit Cards and Net Banking.<br>See all supported payment options
+				</div></h6>
+			</div>
+		</div>
+		<div class="" style="width:50%; border-bottom:orange solid 2px; margin:0 auto;"></div>
+		<center><div class="footer-bottom" ><h6>Welcome to <b>BigRock</b> : An Award-Winning, ICANN-Accredited Domain Name Registrar</h6>
+		</div></center>
+		<center<div><h5 style="text-align:center;">Need Help <i class="fa fa-question-circle fa-lg"></i> : <i class="fa fa-phone"></i> 1-800-200-7625</h5>
+		</center<div></center>
+	</div>
+		
+<br>
+
+</div>
+
+
+
+<!---Cart Model -->
+<div class="modal fade" id="cartModal"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog" style="width:60%;">
+                <div class="modal-content" style="border-radius:0; border-color:rbga(50,50,50,0.9); border-style:solid; border-width:10px;">
+                  <div class="modal-header">
+                    <button type="button" class="fa fa-times-circle close" data-dismiss="modal" aria-hidden="true" ></button>
+                    <h4 class="modal-title" id="myModalLabel"><center>SHOPPING CART :</center></h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="cart-content">
+                    	
+                    	<center><h5 style="color:red;">Your Cart is empty</h5></center>
+
+                    	<hr>
+                    	<h5 style="text-align:left;">Need Help <i class="fa fa-question-circle fa-lg"></i> : <i class="fa fa-phone"></i> 1-800-200-7625</h5>
+                    	<h5 style="position:relative; top:-35px; float:right;">OR CHAT to our expert customer executive</h5>
+
+                    </div>
+		
+
+                  
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+
+</div>
+<!-- /cart modal -->	
+
+<!--Login Modal -->
+<div class="modal fade" id="loginModal"  tabindex="1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog" style="width:675px;">
+                <div class="modal-content" style="border-radius:0; border-color:rbga(50,50,50,0.9); border-style:solid; border-width:10px; padding:15px; padding-bottom:0;">
+                  <div class="modal-header">
+                    <button type="button" class="fa fa-times-circle close" data-dismiss="modal" aria-hidden="true" ></button>
+                    <h4 class="modal-title" id="myModalLabel"><center>LOGIN OR SIGNUP</center></h4>
+                  </div>
+                  
+                  <div class="modal-body">
+                  <div class="login-signup" style="float:right; margin-right:50px; margin-top:30px;">
+                  		<p>New User ? </p>
+                  		<button class="btn btn-warning" data-toggle="modal" id="login-signup" data-target="#signupModal" style="border-radius:2px; font-weight:bold;">Create Account</button>
+	
+                  </div>
+                  <div class="login-partition" style="float:right; margin-right:100px; height:150px; border-right:#eee solid 2px"></div>
+                  <form>
+					<input type ="text" placeholder="Username" class="required form-control" style="width:220px; border-radius:2px; height:40px; margin-top:5px;" required>
+					<input type="password" placeholder="Password" class="form-control" style="width:220px; border-radius:2px; height:40px; margin-top:5px;" required>
+					<button class="btn btn-primary" style="margin-top:15px;">Sign In</button>
+					<div style="position:Relative; top:15px; left:10px; display:inline-block;"><input type="checkbox" id="checkbox" ><label for="checkbox" style="margin-left:10px;">Remember Me</label></div>
+					<div style="margin-top:10px;"><p><a>Forgot password ? </a></p></div>
+
+       			  </form>
+                    
+                  
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+</div>
+
+<!-- /login modal -->
+
+<!--Sign Up Modal -->
+<div class="modal fade" id="signupModal"  tabindex="1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog" style="width:675px; ">
+                <div class="modal-content" style="border-radius:0; border-color:rbga(50,50,50,0.9); border-style:solid; border-width:10px; padding:15px; padding-bottom:0; ">
+                  <div class="modal-header">
+                    <button type="button" class="fa fa-times-circle close" data-dismiss="modal" aria-hidden="true" ></button>
+                    <h4 class="modal-title" id="myModalLabel"><center>SIGNUP FORM</center></h4>
+                  </div>
+                  
+                  <div class="modal-body" style="height:320px;">
+                  
+                  <form>
+					<div style="width:300px; float:right;">
+					<p style="color:orange; text-align:center;"> Contact Information</p> 
+					<input type="text" placeholder="Address" class="form-control" style="width:220px; border-radius:2px; height:35px; margin-top:5px;">
+					<select class="form-control " style="width:220px; margin:5px; margin-left:0; border-radius:2px;">
+						<option>Choose Country: </option>
+						<option>Indian</option>
+						<option>Usa</option>
+						<option>China</option>
+						<option>Russia</option>
+					</select>
+					<select class="form-control " style="width:220px; margin:5px; margin-left:0; border-radius:2px;">
+						<option>Choose state: </option>
+						<option>Delhi</option>
+						<option>Maharashtra</option>
+						<option>Uttarpradesh</option>
+						<option>Haryana</option>
+					</select>
+					<input type ="text" placeholder="City" class="form-control" style="width:220px; border-radius:2px; height:35px; margin-top:5px;" >
+					<input type ="text" placeholder="Zip Code" class="form-control" style="width:220px; border-radius:2px; height:35px; margin-top:5px;" >
+					<input type ="text" placeholder="Phone Number" class="form-control" style="width:220px; border-radius:2px; height:35px; margin-top:5px;" >
+
+
+					</div>
+					<div style="width:300px; position:Relative; top:5px;">
+						<p style="color:orange; "> User Information</p>
+						<input type ="text" placeholder="Full Name" class="form-control" style="width:220px; border-radius:2px; height:35px; margin-top:5px;" >
+						<input type ="email" placeholder="Email" class="form-control" style="width:220px; border-radius:2px; height:35px; margin-top:5px;" >
+						<p style="font-size:10px; position:relative; top:5px; width:220px; margin-top:20px; text-align:center;">PASSWORD Must be between 8 - 15 alphanumeric characters</p>
+						<input type ="password" placeholder="Password" class="form-control" style="width:220px; border-radius:2px; height:35px; margin-top:5px;" >
+						<input type ="password" placeholder="Confirm Password" class="form-control" style="width:220px; border-radius:2px; height:35px; margin-top:5px;" >
+					</div>
+					<button class="btn btn-primary" style="width:220px; margin-top:20px; border-radius:2px;">Sign Up</button>
+       			  </form>
+                    
+                  
+                </div><!-- /.modal-content -->
+                <div class="modal-footer">
+			       <p>Already a member ? <button class="btn btn-warning" id="login-switch" style="border-radius:2px;">Login</button></p>
+			     </div>
+              </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+</div>
+
+<!-- /Sign Up modal -->
+
+<!---Video modal-->
+<div class="modal fade" id="videoModal"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog" style="width:550px; height:380px;">
+                <div class="modal-content" style="border-radius:0; border-color:rbga(50,50,50,0.9); border-style:solid; border-width:10px;">
+
+                  <div class="modal-body">
+                   <iframe width="480" height="360" src="//www.youtube.com/embed/TIV1-JpPPyQ" frameborder="0" allowfullscreen></iframe>
+                    </div>
+		
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+
+</div>
+<!-- /video modal -->	
+
+<script src="scripts/jquery UI.js"></script>
+<script src="scripts/bootstrap.min.js"></script>
+
+
+<script >
+$('#domain-nav-hover').hover(
+       function(){ $('#show-my-div').addClass('display-block') },
+       function(){ $('#show-my-div').removeClass('display-block') }
+)
+$('#show-my-div').hover(
+       function(){ $('#show-my-div').addClass('display-block'),$('#domain-nav-hover').addClass('domain-hover') },
+       function(){ $('#show-my-div').removeClass('display-block'),$('#domain-nav-hover').removeClass('domain-hover') }
+)
+</script>
+
+<script>
+/* for stable circles */
+var cw = $('.content-second-box-first').width();
+$('.content-second-box-first').css({'height':cw+'px'});
+</script>
+
+<script>
+/*stick to top nav*/
+$(document).ready(function() {
+
+var myNavTop1= $('.nav-top-bar').offset().top;  
+  
+var stickyNav = function(){  
+var scrollTop = $(window).scrollTop();
+       
+if (scrollTop > myNavTop1) {   
+    $('.nav-top-bar').addClass('sticktop');
+    $('.cart-menu').addClass('display-block');
+} else {  
+    $('.nav-top-bar').removeClass('sticktop'); 
+    $('.cart-menu').removeClass('display-block');   
+}
+
+  
+};  
+  
+stickyNav();  
+  
+$(window).scroll(function() {  
+    stickyNav();  
+});
+});  
+</script>
+<script>
+  $(function () {
+    $('#myTab a:last').tab('show')
+  })
+</script>
+<script>
+$(document).ready(function(){
+  $("#login-signup").click(function() {
+  $('#loginModal').modal('hide');
+  $('#signupModal').modal('show');
+ })  
+});
+$(document).ready(function(){
+  $("#login-switch").click(function() {
+  $('#signupModal').modal('hide');
+  $('#loginModal').modal('show');
+ })  
+});
+</script>
+
+</body>
+</html>
